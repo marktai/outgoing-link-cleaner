@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "Outgoing Link Cleaner",
+  "version": "1.0.1",
+
+  "description": "Removes redirect URL's in Google, Facebook, and Reddit",
+  "icons": { 
+    "128": "icon.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://www.google.com/*", "*://www.facebook.com/*", "*://www.reddit.com/*"],
+      "js": ["jquery-3.1.0.min.js", "link_cleaner.js"]
+    }
+  ],
+  "permissions": [
+    "*://www.google.com/*", 
+    "*://www.facebook.com/*", 
+    "*://www.reddit.com/*"
+  ],
+  "short_name": "Link Cleaner"
+}
