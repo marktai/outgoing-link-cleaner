@@ -1,6 +1,8 @@
 $("html").on("mouseenter", "a", function(){
-    var outbound = $(this).attr("data-outbound-url");
+    var href = $(this).attr("href");
+    
     // reddit fix
+    var outbound = $(this).attr("data-outbound-url");
     if (outbound.indexOf("out.reddit.com") > -1) {
         var cleanLink = href;
         $(this).attr("data-outbound-url", cleanLink);
@@ -8,7 +10,6 @@ $("html").on("mouseenter", "a", function(){
     }
 
     // facebook fix
-    var href = $(this).attr("href");
     if (href.indexOf("facebook.com/l?") > -1) {
         var cleanLink = $(this).text();
         $(this).attr("href", cleanLink);
