@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Outgoing Link Cleaner",
-  "version": "1.0.2",
+  "version": "1.0.3",
 
   "description": "Removes redirect URL's in Google, Facebook, Reddit, and Slack",
   "icons": { 
