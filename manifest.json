@@ -3,21 +3,27 @@
   "name": "Outgoing Link Cleaner",
   "version": "1.0.2",
 
-  "description": "Removes redirect URL's in Google, Facebook, and Reddit",
+  "description": "Removes redirect URL's in Google, Facebook, Reddit, and Slack",
   "icons": { 
     "128": "icon.png"
   },
 
   "content_scripts": [
     {
-      "matches": ["*://www.google.com/*", "*://www.facebook.com/*", "*://www.reddit.com/*"],
+      "matches": [
+        "*://www.google.com/*", 
+        "*://www.facebook.com/*", 
+        "*://www.reddit.com/*",
+        "*://*.slack.com/*"
+      ],
       "js": ["jquery-3.1.0.min.js", "link_cleaner.js"]
     }
   ],
   "permissions": [
     "*://www.google.com/*", 
     "*://www.facebook.com/*", 
-    "*://www.reddit.com/*"
+    "*://www.reddit.com/*",
+    "*://*.slack.com/*"
   ],
   "short_name": "Link Cleaner"
 }
